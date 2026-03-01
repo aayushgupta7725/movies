@@ -21,5 +21,8 @@ from movies import view
 urlpatterns = [ 
     path('admin/', admin.site.urls),
     path('movies/', view.movies),
-    path('', view.home)
-]
+    path('', view.home),
+    path('movies/<int:id>',view.detail),
+    path('movies/add/',view.add),
+    path('movies/delete/<int:id>',view.delete)
+] 
